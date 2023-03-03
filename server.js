@@ -19,7 +19,7 @@ const fs = require('fs');
 let allNotes = [];
 
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.port || 3000;
 
 const app = express();
 
@@ -29,7 +29,7 @@ const app = express();
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
+
 //Sets up the use of the "public folder"
 app.use(express.static('public'));
 
