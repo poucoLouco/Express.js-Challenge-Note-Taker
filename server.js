@@ -18,6 +18,8 @@ const path = require('path');
 const fs = require('fs');
 let allNotes = [];
 
+const htmlRoutes = require('./routes/htmlRoutes');
+app.use('/', htmlRoutes);
 
 const PORT = process.env.port || 3000;
 
@@ -33,15 +35,6 @@ app.use(express.urlencoded({ extended: true }));
 //Sets up the use of the "public folder"
 app.use(express.static('public'));
 
-// GET Route for homepage
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
-
-// GET Route for feedback page
-app.get('/feedback', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/pages/feedback.html'))
-);
 //Allows for the listening for the PORT for the API server.
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
