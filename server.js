@@ -1,17 +1,4 @@
-// // Dependencies
-// // =============================================================
-// var express = require("express");
-// var path = require("path");
-// var fs = require('fs');
 
-// // Sets up the Express App
-// // =============================================================
-// var app = express();
-// var PORT = process.env.PORT || 3000;
-
-// // Sets up the Express app to handle data parsing
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
 
 const express = require('express');
 const path = require('path');
@@ -19,12 +6,13 @@ const fs = require('fs');
 let allNotes = [];
 
 const htmlRoutes = require('./routes/htmlRoutes');
-app.use('/', htmlRoutes);
+
 
 const PORT = process.env.port || 3000;
 
 const app = express();
 
+app.use('/', htmlRoutes);
 // Import custom middleware, "cLog"
 
 

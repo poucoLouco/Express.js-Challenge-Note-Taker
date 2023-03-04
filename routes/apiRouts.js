@@ -1,11 +1,11 @@
 var db = require("../db/db.json");
 var fs = require("fs");
-
+const router = require("express").Router();
 
 // //GET /api/notes should read the db.json file and return all saved 
 //notes as JSON.
 
-app.get('/api/notes', function(req, res) {
+router.get('/api/notes', function(req, res) {
   fs.readFile('./db/db.json', (err, data) => {
     if (err) throw err;
     //and return all saved notes as JSON.
@@ -16,7 +16,7 @@ app.get('/api/notes', function(req, res) {
 
   
   /// POST /api/notes should receive a new note 
-  app.post("/api/notes", function (req, res) {
+  router.post("/api/notes", function (req, res) {
     // /// Pto save on the request body
     db.push(req.body);
     // Add unique id to each note
@@ -35,7 +35,7 @@ app.get('/api/notes', function(req, res) {
 //you'll need to read all notes from the db.json file(fs.readFileSync("db/db.json")), 
 //and then rewrite the notes to the db.json file.
 //DELETE /api/notes/:id should receive a query parameter containing the id of a note to delete
- app.delete("/api/notes/:id", function (req, res) {
+ router.delete("/api/notes/:id", function (req, res) {
     var id = req.params.id;
     // remove the note with the given id property,
     db.splice(id - 1, 1);
