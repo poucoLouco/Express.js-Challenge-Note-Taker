@@ -17,7 +17,7 @@ router.get('/notes', (req, res) => {
 
 // other routes responds with the index.html file if not match with
 router.get("*", function(req, res) {
-  res.send(path.join(__dirname, "../public/index.html"));
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 
