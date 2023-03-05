@@ -30,20 +30,23 @@ router.get('/notes', function(req, res) {
 //you'll need to read all notes from the db.json file(fs.readFileSync("db/db.json")), 
 //and then rewrite the notes to the db.json file.
 //DELETE /api/notes/:id should receive a query parameter containing the id of a note to delete
-  router.delete("/notes/:id", function (req, res) {
-  res.send('Got a DELETE request at /user')
-    var id = req.params.id.toString();;
-    // remove the note with the given id property,
-    db.splice(id - 1, 1);
-    // reassign id
-    db.forEach((obj, i) => {
-      obj.id = i + 1;
-    });
-    // and then rewrite the notes to the db.json file.
-    fs.writeFile("./db/db.json", JSON.stringify(db), function () {
-      res.json(db);
-    });
+router.delete('/notes/:id', function (req, res) {
+  var id = req.params.id;
+  // remove the note with the given id property,
+  notes.splice(id - 1, 1);
+  // reassign id
+  notes.forEach((obj, i) => { 
+    obj.id = i + 1;
   });
+
+  let tempArr = {
+    notes: notes,
+  };
+  // and then rewrite the notes to the db.json file.
+  fs.writeFile('./db/db.json', JSON.stringify(tempArr, null, 2), function () {
+    res.json(tempArr);
+  });
+});
 
   module.exports = router;
 
