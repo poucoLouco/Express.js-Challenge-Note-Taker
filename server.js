@@ -8,11 +8,11 @@ let allNotes = [];
 const htmlRoutes = require('./routes/htmlRoutes');
 
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.port || 300;
 
 const app = express();
 
-app.use('/', htmlRoutes);
+
 // Import custom middleware, "cLog"
 
 
@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 //Sets up the use of the "public folder"
 app.use(express.static('public'));
 
+app.use('/', htmlRoutes);
 //Allows for the listening for the PORT for the API server.
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
