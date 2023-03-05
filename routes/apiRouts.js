@@ -39,7 +39,7 @@ router.get('/notes', function(req, res) {
       obj.id = i + 1;
     });
     // and then rewrite the notes to the db.json file.
-    fs.writeFile("./db/db.json", JSON.stringify({ notes: updatedNotesArray }), function () {
+    fs.writeFileSync("./db/db.json", JSON.stringify({ notes: updatedNotesArray }), function () {
       res.json(notes);
     });
   });
