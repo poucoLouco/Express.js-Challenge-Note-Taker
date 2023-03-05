@@ -1,22 +1,18 @@
-var db = require("../db/db.json");
+var {notes} = require("../db/db.json");
 var fs = require("fs");
 const router = require("express").Router();
 
 // //GET /api/notes should read the db.json file and return all saved 
 //notes as JSON.
 
-router.get('/api/notes', function(req, res) {
-  fs.readFile('./db/db.json', (err, data) => {
-    if (err) throw err;
-    //and return all saved notes as JSON.
-    dbData = JSON.parse(data);
-    res.send(dbData);
+router.get('/notes', function(req, res) {
+    res.json(notes);
   });
-});
+
 
   
   /// POST /api/notes should receive a new note 
-  router.post("/api/notes", function (req, res) {
+  router.post("/notes", function (req, res) {
     // /// Pto save on the request body
     db.push(req.body);
     // Add unique id to each note

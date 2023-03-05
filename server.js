@@ -5,6 +5,9 @@ const path = require('path');
 const fs = require('fs');
 let allNotes = [];
 
+const apiRoutes = require('./routes/apiRouts');
+app.use('/api', apiRoutes);
+
 const htmlRoutes = require('./routes/htmlRoutes');
 
 
