@@ -1,1 +1,14 @@
-{"notes":[{"title":"Test Title","text":"Test text","id":1},{"title":"xcxxcx","text":"cxcxcxcx","id":2},{"title":"cbcbc","text":"cbcbc","id":3},{"title":"xdxx","text":"xxxxx","id":4},{"title":"fhfgh","text":"fhfhfhf","id":5},{"title":"gggg","text":"gqqqqqqqqqq","id":6},{"title":"dhdh","text":" yiutt","id":7},{"title":"ggg","text":"g","id":8}]}
+{
+  "notes": [
+    {
+      "title": "survive",
+      "text": "pass all the modules with understanding what how and why ",
+      "id": 1
+    },
+    {
+      "title": "qwe",
+      "text": "ewq",
+      "id": 2
+    }
+  ]
+}
