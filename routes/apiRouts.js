@@ -42,7 +42,7 @@ router.get('/notes', function(req, res) {
     writeToFile('./db/db.json', result);
 
     // Respond to the DELETE request
-    res.json(`Item ${id} has been deleted 🗑️`);
+    res.json(`Item ${notes} has been deleted 🗑️`);
   });
 });
 
