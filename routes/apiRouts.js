@@ -32,7 +32,7 @@ router.get('/notes', function(req, res) {
 //DELETE /api/notes/:id should receive a query parameter containing the id of a note to delete
  router.delete("/api/notes/:id", function (req, res) {
   res.send('Got a DELETE request at /user')
-    var id = req.params.id;
+    var id = req.params.id.toString();;
     // remove the note with the given id property,
     db.splice(id - 1, 1);
     // reassign id
