@@ -6,8 +6,11 @@ An application called Note Taker that can be used to write and save notes. This 
 
 The application’s front end has already been created.Developed the back-end of the application and connected beetwen.
 
+# Deployed Application 🔥
 
-# User Story
+https://note-take-ro.herokuapp.com/
+
+# User Story 📃
 
 AS A small business owner
 I WANT to be able to write and save notes
