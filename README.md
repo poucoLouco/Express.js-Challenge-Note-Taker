@@ -8,9 +8,9 @@ The application’s front end has already been created.Developed the back-end of
 
 # Deployed Application 🔥
 
+https://note-take-ro.herokuapp.com/
 
-
-# User Story 😗
+# User Story 📃
 
 AS A small business owner
 I WANT to be able to write and save notes
