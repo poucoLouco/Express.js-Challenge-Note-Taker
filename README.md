@@ -7,8 +7,8 @@ An application called Note Taker that can be used to write and save notes. This 
 The application’s front end has already been created.Developed the back-end of the application and connected beetwen.
 
 # Deployed Application 🔥
-[![heroku](https://user-images.githubusercontent.com/118241284/225170749-06dde1e0-1943-4d18-bbca-178c64185eca.png)][3]
-[3]:https://dashboard.heroku.com/apps/note-take-ro
+
+https://dashboard.heroku.com/apps/note-take-ro
 
 # User Story 📃
 
